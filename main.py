@@ -41,12 +41,13 @@ class StdOutListener(StreamListener):
     def on_error(self, status_code):
         print(status_code)
 
-palabras_track = ['pito','subnormal']
+palabras_track = ['pito','subnormal']    #Palabras a trackear, se pueden trackear mas cosas aparte de palabras
 
 if __name__=="__main__":
     listener = StdOutListener()
-    auth = tweepy.OAuthHandler("GfNzrBpqqd7oGQHirnJsr8fGM", "HSYMvCbg0xDR3ulmBIccvgZ1kHAUdimuYYBoMHjKLG1XhNUW3u")
-    auth.set_access_token("1224795286155014145-5DpyUa5o8HHEERW5utA8XkRxsowLQe", "HSKPxevXKzdMBPh62ZTdlkAL70fj9f5ZurK3YjbT9G5lw")
+    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+    auth.set_access_token(access_token, access_token_secret)
+
     api = tweepy.API(auth)
 
 
